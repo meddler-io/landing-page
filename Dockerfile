@@ -1,0 +1,57 @@
+
+
+FROM ghost:latest as cloudinary
+WORKDIR $GHOST_INSTALL/current
+RUN yarn add ghost-storage-cloudinary@2
+
+
+FROM ghost:latest
+
+
+COPY --chown=node:node --from=cloudinary $GHOST_INSTALL/current/node_modules $GHOST_INSTALL/current/node_modules
+COPY --chown=node:node --from=cloudinary $GHOST_INSTALL/current/node_modules/ghost-storage-cloudinary $GHOST_INSTALL/current/core/server/adapters/storage/ghost-storage-cloudinary
+
+
+RUN  yarn add ghost-storage-cloudinary@2
+WORKDIR $GHOST_INSTALL
+
+RUN ghost config storage.active ghost-storage-cloudinary
+RUN ghost config storage.ghost-storage-cloudinary.useDatedFolder false
+RUN ghost config storage.ghost-storage-cloudinary.auth.cloud_name meddler
+RUN ghost config storage.ghost-storage-cloudinary.auth.api_key 189957137993538
+RUN ghost config storage.ghost-storage-cloudinary.auth.api_secret gS86MRSlHRqnlZAM4bjGMAyzkbY
+
+
+RUN ghost config storage.ghost-storage-cloudinary.upload.use_filename true
+RUN ghost config storage.ghost-storage-cloudinary.upload.unique_filename false
+RUN ghost config storage.ghost-storage-cloudinary.upload.overwrite false
+RUN ghost config storage.ghost-storage-cloudinary.upload.folder meddler-images
+RUN ghost config storage.ghost-storage-cloudinary.upload.tags meddler-meddler
+
+RUN ghost config storage.ghost-storage-cloudinary.fetch.quality auto:low
+RUN ghost config storage.ghost-storage-cloudinary.secure false
+RUN ghost config storage.ghost-storage-cloudinary.cdn_subdomain true
+
+
+RUN ghost config imageOptimization false
+
+RUN ls
+
+RUN cat config.production.json
+
+
+
+
+
+
+
+
+# COPY $GHOST_INSTALL/current/node_modules $GHOST_INSTALL/current/node_modules
+# COPY $GHOST_INSTALL/current/node_modules/ghost-storage-cloudinary $GHOST_INSTALL/current/core/server/adapters/storage/ghost-storage-cloudinary
+# RUN set -ex; \
+#     node ghost config storage.active ghost-storage-cloudinary; \
+#     node ghost config storage.ghost-storage-cloudinary.upload.use_filename true; \
+#     node ghost config storage.ghost-storage-cloudinary.upload.unique_filename false; \
+#     node ghost config storage.ghost-storage-cloudinary.upload.overwrite false; \
+#     node ghost config storage.ghost-storage-cloudinary.fetch.quality auto; \
+#     node ghost config storage.ghost-storage-cloudinary.fetch.cdn_subdomain true;
