@@ -25,7 +25,8 @@ services:
           NODE_ENV: production
           mail__transport: SMTP
           mail__options__service: Mailgun
-          mail__options__service: Mailgun
+          mail__options__service_a_uth__user: postmaster@secops.meddler.xyz	
+          mail__options__service__auth__pass: b485129da7cb1a8379f5b08fcfb76d29-65b08458-1bcf8d24
 
         volumes: 
             - ./content/content:/var/lib/ghost/content
