@@ -6,7 +6,7 @@ services:
         restart: always
         container_name: ghost
         ports:
-          - 80:2368
+          - 127.0.0.1:2368:2368
         environment:
           # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
           database__client: mysql
