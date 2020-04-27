@@ -4,7 +4,7 @@ services:
     ghost:
         build: .
         restart: always
-        container_name: : ghost
+        container_name: ghost
         ports:
           - 8080:2368
         environment:
@@ -29,7 +29,7 @@ services:
     db:
         image: mysql:5.7
         restart: always
-        container_name: : db
+        container_name: db
         environment:
             MYSQL_ROOT_PASSWORD: example
         expose:
