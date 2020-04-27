@@ -26,14 +26,14 @@ services:
           mail__from: "'Custom Name' <myemail@meddler.xyz>"
           mail__options__service: Mailgun
           mail__options__host: smtp.mailgun.org
-          mail__options__port: 587
+          mail__options__port: 25
           mail__options__secureConnection: 'false'
 
         #   mail__options__host: smtp.mailgun.org
         #   mail__options__secureConnection: "true"
         #   mail__options__port: 465
-          mail__options__auth__user: postmaster@secops.meddler.xyz
-          mail__options__auth_pass: b485129da7cb1a8379f5b08fcfb76d29-65b08458-1bcf8d24
+          mail__options__auth__user: noreply@secops.meddler.xyz
+          mail__options__auth_pass: 6a62404a78750f2ee3d01e81ea66e60d-65b08458-b9b2b63e
 
         volumes: 
             - ./content/content:/var/lib/ghost/content
