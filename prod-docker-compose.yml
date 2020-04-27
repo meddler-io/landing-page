@@ -25,8 +25,7 @@ services:
           mail__transport: SMTP
           mail__options__service: Mailgun
           mail__options__host: smtp.eu.mailgun.org
-          mail__options__secureConnection: true
-
+          mail__options__secureConnection: "true"
           mail__options__port: 465
           mail__options__service__auth__user: postmaster@secops.meddler.xyz
           mail__options__service__auth__pass: b485129da7cb1a8379f5b08fcfb76d29-65b08458-1bcf8d24
