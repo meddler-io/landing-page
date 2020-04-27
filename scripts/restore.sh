@@ -1,2 +1,2 @@
 #Restore
-cat backup.sql | docker exec -i db /usr/bin/mysql -u root --password=root DATABASE
+cat ./backup/backup.sql | docker exec -i db /usr/bin/mysql -u root --password=example ghost
