@@ -14,7 +14,7 @@ services:
           database__connection__user: root
           database__connection__password: example
           database__connection__database: ghost
-          url: http://meddler.xyz/
+          url: https://meddler.xyz/
           NODE_ENV: production
           mail__transport: SMTP
           mail__options__service: Mailgun
