@@ -6,7 +6,7 @@ services:
         restart: always
         container_name: ghost
         ports:
-          - 8080:2368
+          - 80:2368
         environment:
           # see https://docs.ghost.org/docs/config#section-running-ghost-with-config-env-variables
           database__client: mysql
@@ -14,7 +14,7 @@ services:
           database__connection__user: root
           database__connection__password: example
           database__connection__database: ghost
-          url: http://meddler.xyz:8080/
+          url: http://meddler.xyz/
           NODE_ENV: production
           mail__transport: SMTP
           mail__options__service: Mailgun
