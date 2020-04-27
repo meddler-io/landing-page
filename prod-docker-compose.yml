@@ -23,8 +23,12 @@ services:
           admin: https://admin.meddler.xyz/
           NODE_ENV: production
           mail__transport: SMTP
-        #   mail__from: "'Custom Name' <myemail@meddler.xyz>"
+          mail__from: "'Custom Name' <myemail@meddler.xyz>"
           mail__options__service: Mailgun
+          mail__options__host: smtp.mailgun.org
+          mail__options__port: 587
+          mail__options__secureConnection: 'false'
+
         #   mail__options__host: smtp.mailgun.org
         #   mail__options__secureConnection: "true"
         #   mail__options__port: 465
