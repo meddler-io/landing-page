@@ -29,7 +29,7 @@ RUN ghost config storage.ghost-storage-cloudinary.upload.folder meddler-images
 RUN ghost config storage.ghost-storage-cloudinary.upload.tags meddler-meddler
 
 RUN ghost config storage.ghost-storage-cloudinary.fetch.quality auto:low
-RUN ghost config storage.ghost-storage-cloudinary.secure true
+RUN ghost config storage.ghost-storage-cloudinary.fetch.secure true
 RUN ghost config storage.ghost-storage-cloudinary.cdn_subdomain true
 
 
