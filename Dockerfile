@@ -33,6 +33,16 @@ RUN ghost config storage.ghost-storage-cloudinary.secure true
 RUN ghost config storage.ghost-storage-cloudinary.cdn_subdomain true
 
 
+
+RUN ghost config mail.transport SMTP
+RUN ghost config mail.options.service Mailgun
+RUN ghost config mail.options.auth.user postmaster@secops.meddler.xyz
+RUN ghost config mail.options.auth.pass b485129da7cb1a8379f5b08fcfb76d29-65b08458-1bcf8d24
+
+
+
+
+
 RUN ghost config imageOptimization false
 
 RUN ls
