@@ -15,7 +15,7 @@ services:
           - database__connection__password=example
           - database__connection__database=ghost
           - url=https://meddler.xyz/
-          - admin_url=https://admin.meddler.xyz
+          - admin__url=https://admin.meddler.xyz
           - NODE_ENV=production
           - mail__transport=SMTP
           - mail__from='Custom Name' <noreply@meddler.xyz>
@@ -24,7 +24,7 @@ services:
           - mail__options__port=587
           - mail__options__secureConnection=true
           - mail__options__auth__user=noreply@secops.meddler.xyz
-          - mail__options__auth__pass:=37aeafe38456225a454541956d82a04d-65b08458-d3161f28
+          - mail__options__auth__pass=37aeafe38456225a454541956d82a04d-65b08458-d3161f28
 
         volumes: 
             - ./content/content:/var/lib/ghost/content
