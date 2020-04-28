@@ -12,7 +12,6 @@ services:
           - database__client=mysql
           - database__connection__host=db
           - database__connection__user=root
-          - database__connection__user=root
           - database__connection__password=example
           - database__connection__database=ghost
           - url=https://meddler.xyz/
