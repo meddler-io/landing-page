@@ -20,10 +20,10 @@ services:
           database__connection__password: example
           database__connection__database: ghost
           url: https://meddler.xyz/
-          admin: https://admin.meddler.xyz/
+          admin_url: https://admin.meddler.xyz
           NODE_ENV: production
           # mail__transport: SMTP
-          mail__from: "'Custom Name' <noreply@meddler.xyz>"
+          # mail__from: "'Custom Name' <noreply@meddler.xyz>"
           mail__options__service: mailgun
           mail__options__host: smtp.mailgun.org
           # mail__options__port: 25
