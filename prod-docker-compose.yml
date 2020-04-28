@@ -22,18 +22,18 @@ services:
           url: https://meddler.xyz/
           admin: https://admin.meddler.xyz/
           NODE_ENV: production
-          mail__transport: SMTP
-          mail__from: "'Custom Name' <myemail@meddler.xyz>"
-          mail__options__service: Mailgun
-          mail__options__host: smtp.mailgun.org
-          mail__options__port: 25
-          mail__options__secureConnection: 'false'
+          # mail__transport: SMTP
+          # mail__from: "'Custom Name' <myemail@meddler.xyz>"
+          # mail__options__service: Mailgun
+          # mail__options__host: smtp.mailgun.org
+          # mail__options__port: 25
+          # mail__options__secureConnection: 'false'
 
         #   mail__options__host: smtp.mailgun.org
         #   mail__options__secureConnection: "true"
         #   mail__options__port: 465
-          mail__options__auth__user: noreply@secops.meddler.xyz
-          mail__options__auth_pass: 6a62404a78750f2ee3d01e81ea66e60d-65b08458-b9b2b63e
+          # mail__options__auth__user: noreply@secops.meddler.xyz
+          # mail__options__auth_pass: 6a62404a78750f2ee3d01e81ea66e60d-65b08458-b9b2b63e
 
         volumes: 
             - ./content/content:/var/lib/ghost/content
