@@ -26,7 +26,7 @@ services:
           # mail__from: "'Custom Name' <noreply@meddler.xyz>"
           mail__options__service: mailgun
           mail__options__host: smtp.mailgun.org
-          # mail__options__port: 25
+          mail__options__port: 587
           # mail__options__secureConnection: 'false'
 
           # mail__options__host: smtp.mailgun.org
